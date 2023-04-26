@@ -1,0 +1,53 @@
+/* CSS Document */
+
+.check_bp_text_input_areas{
+	padding: 10px;
+}
+
+.check_bp_text_areas{
+    text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+
+
+}
+
+.bp_inputs{
+	
+	width: 30%;
+	text-indent: 2%;
+	font-size: 18px;
+}
+
+#check_bp_bt{
+	align-content: center;
+	width: 30%;
+	height: 80%;
+	margin: auto;
+	padding: 5px;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+    text-align:center;
+
+	line-height:250%;
+
+	font-size: 150%;
+	
+	border-style: solid;
+	border-radius: 5px;
+	border-color: rgba(183,187,191,1.00);  
+	background-color:rgba(227,231,232,1.00); 
+	border-width: 2px;
+	font-weight: bold;
+}
+
+#bp_results{
+	display: none;
+	box-sizing: border-box;
+
+	height: 50%; width: 100%;
+}
+
+
+
