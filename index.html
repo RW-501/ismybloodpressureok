@@ -254,25 +254,9 @@ chart.render();
 
 		}
 		
-function showPage(pageId) {
-  // Get all elements with the class name "Page"
-  const pages = document.getElementsByClassName("Page");
-  
-  // Loop through all "Page" elements and hide them
-  for (let i = 0; i < pages.length; i++) {
-    pages[i].style.display = "none";
-  }
-  
-  // Get the element with the ID that matches the passed pageId parameter
-  const pageToShow = document.getElementById(pageId);
-  
-  // If the element exists, show it
-  if (pageToShow) {
-    pageToShow.style.display = "block";
-  }
-}
+
 		
-	showPage("Home");
+		
 		
 	</script>
 				
@@ -527,7 +511,50 @@ function showPage(pageId) {
 
 		</div>
 	</footer>
-
+<script>
+	
+			
+function showPage(pageId) {
+  // Get all elements with the class name "Page"
+  const pages = document.getElementsByClassName("Page");
+  
+  // Loop through all "Page" elements and hide them
+  for (let i = 0; i < pages.length; i++) {
+    pages[i].style.display = "none";
+  }
+  
+  // Get the element with the ID that matches the passed pageId parameter
+  const pageToShow = document.getElementById(pageId);
+  
+  // If the element exists, show it
+  if (pageToShow) {
+    pageToShow.style.display = "block";
+  }
+}
+		
+	showPage("Home");
+		
+		
+		
+// Add an event listener to all links with a class of "page-link"
+const links = document.querySelectorAll(".page-link");
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+    
+    // Get the ID of the page to show from the link's href attribute
+    const pageId = this.getAttribute("href").substr(1);
+    
+    // Call the showPage function with the page ID
+    showPage(pageId);
+  });
+}
+		
+		
+		
+	</script>
+			
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
