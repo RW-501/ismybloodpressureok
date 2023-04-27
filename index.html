@@ -59,7 +59,35 @@
   });
 </script>
  
- 
+ <style>
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		input, textarea {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
  
  
   </head>
@@ -80,11 +108,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Home</a></li>
-						<li><a href="#About">About</a></li>
-						<li><a href="#Blogs">Blog</a></li>
-						<li><a href="#Remedies">Remedies</a></li>
-						<li><a href="#Contact">Contact</a></li>
+						<li><a href="#" onclick="showPage('Home')">Home</a></li>
+						<li><a href="#About" onclick="showPage('About')">About</a></li>
+						<li><a href="#Blogs" onclick="showPage('Blogs')">Blog</a></li>
+						<li><a href="#Remedies" onclick="showPage('Remedies')">Remedies</a></li>
+						<li><a href="#Contact" onclick="showPage('Contact')">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -154,29 +182,29 @@
 			if(systole_input >= '90' && systole_input <= '120' ||
 			   diastole_input >= '60' && diastole_input <= '80' ){
 				BP_type = 'Desired "Blood Pressure"';
-				readmore_link = "<a href='#Desired'>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Desired' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
 			}
 			if(systole_input >= '120' && systole_input <= '139' ||
 			   diastole_input >= '80' && diastole_input <= '89' ){
 				BP_type = 'Prehypertension "High Normal"';
-				readmore_link = "<a href='#Prehypertension'>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Prehypertension' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
 			}
 			
 			// High BP
 			if(systole_input >= '140' && diastole_input >= '90' ){
 				BP_type = 'Isolated Systolic Hypertension';
-				readmore_link = "<a href='#Systolic'>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Systolic' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
 			}
 			
 			if(systole_input >= '140' && systole_input <= '159' ||
 			   diastole_input >= '90' && diastole_input <= '99' ){
 				BP_type = 'Stage 1 Hypertension';
-				readmore_link = "<a href='#Stage1'>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Stage1' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
 			}
 			if(systole_input >= '160' && systole_input <= '179' ||
 			   diastole_input >= '100' && diastole_input <= '119' ){
 				BP_type = 'Stage 2 Hypertension';
-				readmore_link = "<a href='#Stage2'>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Stage2' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
 			}
 			
 			var result_link, result_type; 
@@ -184,17 +212,17 @@
 			if(systole_input < '90' || diastole_input < '60' ){
 				BP_results = 'Low';
 				result_type= 'Low blood pressure';
-				result_link = "<a href='#Hypotension'>Check out more info here "+result_type+"...</a>";
+				result_link = "<a href='#Hypotension' onclick=showPage('Desired')>Check out more info here "+result_type+"...</a>";
 			}		
 			if(systole_input >= '90' && systole_input <= '120' ||
 			   diastole_input >= '60' && diastole_input <= '120' ){
 				BP_results = 'OK';
-				result_link = "<a href='#remedies'>Check out remdies and drop some advise to others </a>";
+				result_link = "<a href='#remedies' onclick=showPage('Desired')>Check out remdies and drop some advise to others </a>";
 			}				
 			if(systole_input > '180' || diastole_input > '120' ){
 				BP_results = 'High';
 				result_type= 'High blood pressure';
-				result_link = "<a href='#Hypertensive'>Check out more info here about "+result_type+"...</a>";
+				result_link = "<a href='#Hypertensive' onclick=showPage('Desired')>Check out more info here about "+result_type+"...</a>";
 			}
 						
 			
