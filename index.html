@@ -108,7 +108,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" onclick="showPage('Home')">Home</a></li>
+						<li><a href="#Home" onclick="showPage('Home')">Home</a></li>
 						<li><a href="#About" onclick="showPage('About')">About</a></li>
 						<li><a href="#Blogs" onclick="showPage('Blogs')">Blog</a></li>
 						<li><a href="#Remedies" onclick="showPage('Remedies')">Remedies</a></li>
@@ -217,7 +217,7 @@
 			if(systole_input >= '90' && systole_input <= '120' ||
 			   diastole_input >= '60' && diastole_input <= '120' ){
 				BP_results = 'OK';
-				result_link = "<a href='#remedies' onclick=showPage('remedies')>Check out remdies and drop some advise to others </a>";
+				result_link = "<a href='#Remedies' onclick=showPage('Remedies')>Check out remdies and drop some advise to others </a>";
 			}				
 			if(systole_input > '180' || diastole_input > '120' ){
 				BP_results = 'High';
