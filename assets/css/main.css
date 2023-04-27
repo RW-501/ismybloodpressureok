@@ -143,7 +143,9 @@ a:after {
 	padding-bottom: 50px;
 }
 
-
+.flex{
+	    display: flex;
+}
 /* +++++ WRAP SECTIONS +++++ */
 
 #ww {
