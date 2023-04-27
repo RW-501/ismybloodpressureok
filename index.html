@@ -120,12 +120,14 @@
 	</header>
 	<!-- +++++ Welcome Section +++++ -->
 	<div id="ww">
-	    <div  id="Home" class="container Page">
+	    <div  id="#" class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
+
+				<div id='check_bp_container'  class="container Page">
+					
 									<h1>Is My Blood Pressure Ok?</h1>
 
-				<div id='check_bp_container'>
 					<div id='check_bp_container_top'>
 						<div class='check_bp_text_input_areas'>
 							<div class='check_bp_text_areas'>
@@ -150,10 +152,12 @@
 					
 				</div>
 				<br>
+		<div id='bp_results_container'   class="container Page">
+
 				<div id='bp_results'></div>
 				
 				<div id='bp_results_text'></div>
-				
+					</div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 	<script>
@@ -242,7 +246,7 @@
 				ms3 = ' Your blood pressure is '+BP_results +"!!!" + '<br>'+ result_link + "<br>";
 			} 
 			
-			BP_message = ms1 + ms2 + ' <br><h4>'+ ms3 + '<h4> <hr><br>'+ "<a href='#Home' onclick=showPage('Home')>Reset</a>";
+			BP_message = ms1 + ms2 + ' <br><h4>'+ ms3 + '<h4> <hr><br>'+ "<a href='#check_bp_container' onclick=showPage('check_bp_container')>Reset</a>";
 			
 			var chart = new CanvasJS.Chart("bp_results", {
 	animationEnabled: true,
