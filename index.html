@@ -182,29 +182,29 @@
 			if(systole_input >= '90' && systole_input <= '120' ||
 			   diastole_input >= '60' && diastole_input <= '80' ){
 				BP_type = 'Desired "Blood Pressure"';
-				readmore_link = "<a href='#Desired' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Desired' onclick=showPage('Desired'); >Read more about "+BP_type+"...</a>";
 			}
 			if(systole_input >= '120' && systole_input <= '139' ||
 			   diastole_input >= '80' && diastole_input <= '89' ){
 				BP_type = 'Prehypertension "High Normal"';
-				readmore_link = "<a href='#Prehypertension' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Prehypertension' onclick=showPage('Prehypertension'); >Read more about "+BP_type+"...</a>";
 			}
 			
 			// High BP
 			if(systole_input >= '140' && diastole_input >= '90' ){
 				BP_type = 'Isolated Systolic Hypertension';
-				readmore_link = "<a href='#Systolic' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Systolic' onclick=showPage('Systolic')>Read more about "+BP_type+"...</a>";
 			}
 			
 			if(systole_input >= '140' && systole_input <= '159' ||
 			   diastole_input >= '90' && diastole_input <= '99' ){
 				BP_type = 'Stage 1 Hypertension';
-				readmore_link = "<a href='#Stage1' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Stage1' onclick=showPage('Stage1')>Read more about "+BP_type+"...</a>";
 			}
 			if(systole_input >= '160' && systole_input <= '179' ||
 			   diastole_input >= '100' && diastole_input <= '119' ){
 				BP_type = 'Stage 2 Hypertension';
-				readmore_link = "<a href='#Stage2' onclick=showPage('Desired')>Read more about "+BP_type+"...</a>";
+				readmore_link = "<a href='#Stage2' onclick=showPage('Stage2')>Read more about "+BP_type+"...</a>";
 			}
 			
 			var result_link, result_type; 
@@ -212,17 +212,17 @@
 			if(systole_input < '90' || diastole_input < '60' ){
 				BP_results = 'Low';
 				result_type= 'Low blood pressure';
-				result_link = "<a href='#Hypotension' onclick=showPage('Desired')>Check out more info here "+result_type+"...</a>";
+				result_link = "<a href='#Hypotension' onclick=showPage('Hypotension')>Check out more info here "+result_type+"...</a>";
 			}		
 			if(systole_input >= '90' && systole_input <= '120' ||
 			   diastole_input >= '60' && diastole_input <= '120' ){
 				BP_results = 'OK';
-				result_link = "<a href='#remedies' onclick=showPage('Desired')>Check out remdies and drop some advise to others </a>";
+				result_link = "<a href='#remedies' onclick=showPage('remedies')>Check out remdies and drop some advise to others </a>";
 			}				
 			if(systole_input > '180' || diastole_input > '120' ){
 				BP_results = 'High';
 				result_type= 'High blood pressure';
-				result_link = "<a href='#Hypertensive' onclick=showPage('Desired')>Check out more info here about "+result_type+"...</a>";
+				result_link = "<a href='#Hypertensive' onclick=showPage('Hypertensive')>Check out more info here about "+result_type+"...</a>";
 			}
 						
 			
@@ -233,16 +233,16 @@
 			ms1 = '<h1>Your Blood Pressure is <strong>'+BP_results + "</strong></h1><br>";
 			ms2 = 'With a Systole '+ s+' and a Diastole of '+ d ;
 			if(BP_results == "Low"){
-				ms3 = ' your blood pressure is '+BP_results + '<br>'+ result_link;
+				ms3 = ' Your blood pressure is '+BP_results + '<br>'+ result_link + "<br>";
 			} 
 			if(BP_results == "High"){
-				ms3 = ' your blood pressure is '+BP_results + '<br>'+ result_link;
+				ms3 = ' Your blood pressure is '+BP_results + '<br>'+ result_link + "<br>";
 			} 
 			if(BP_results == "OK"){
-				ms3 = 'your blood pressure is '+BP_results +"!!!" + '<br>'+ result_link;
+				ms3 = ' Your blood pressure is '+BP_results +"!!!" + '<br>'+ result_link + "<br>";
 			} 
 			
-			BP_message = ms1 + ms2 + ' <br><h4>'+ ms3 + '<h4> <hr><br>'+ BP_type;
+			BP_message = ms1 + ms2 + ' <br><h4>'+ ms3 + '<h4> <hr><br>'+ "<a href='#Home' onclick=showPage('Home')>Reset</a>";
 			
 			var chart = new CanvasJS.Chart("bp_results", {
 	animationEnabled: true,
