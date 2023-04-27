@@ -25,7 +25,7 @@
 <meta name='googlebot' content='noarchive'>
 <meta name='googlebot' content='INDEX,FOLLOW'>
 <meta name='language' content='English'> 
-<meta name='reply-to' content='www.ismybloodpressureok.com/contact/'>
+<meta name='reply-to' content='lrpmedia@yahoo.com'>
 <meta name='robots' content='noydir'>
 <meta name='generator' content='Macromedia Dreamweaver'>
 
@@ -92,7 +92,7 @@
 	</header>
 	<!-- +++++ Welcome Section +++++ -->
 	<div id="ww">
-	    <div  id="Home" class="container">
+	    <div  id="Home" class="container Page">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
 									<h1>Is My Blood Pressure Ok?</h1>
@@ -254,7 +254,26 @@ chart.render();
 
 		}
 		
-
+function showPage(pageId) {
+  // Get all elements with the class name "Page"
+  const pages = document.getElementsByClassName("Page");
+  
+  // Loop through all "Page" elements and hide them
+  for (let i = 0; i < pages.length; i++) {
+    pages[i].style.display = "none";
+  }
+  
+  // Get the element with the ID that matches the passed pageId parameter
+  const pageToShow = document.getElementById(pageId);
+  
+  // If the element exists, show it
+  if (pageToShow) {
+    pageToShow.style.display = "block";
+  }
+}
+		
+	showPage("Home");
+		
 	</script>
 				
 				
@@ -268,7 +287,7 @@ chart.render();
 	
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Desired" class="container pt">
+	<div id="Desired" class="container pt Page">
 						<h4>Desired & Normal Blood Pressure</h4>
 		<div class="row mt centered">	
        <h2>What is normal blood pressure?</h2>
@@ -282,7 +301,7 @@ chart.render();
 		
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Prehypertension" class="container pt">
+	<div id="Prehypertension" class="container pt Page">
 						<h4>Prehypertension and High-Normal Blood Pressure</h4>
 		<div class="row mt centered">	
 	
@@ -305,7 +324,7 @@ chart.render();
 	
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Systolic" class="container pt">
+	<div id="Systolic" class="container pt Page">
 						<h4>Systolic Hypertension</h4>
 		<div class="row mt centered">	
 	
@@ -322,7 +341,7 @@ chart.render();
 		
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Stage1" class="container pt">
+	<div id="Stage1" class="container pt Page">
 						<h4>Stage 1 Hypertension</h4>
 		<div class="row mt centered">	
      <p>Stage 1 hypertension is a condition in which a person's blood pressure consistently measures at a systolic pressure of <span style="font-weight: bold;">130-139 mm Hg</span> or a diastolic pressure of <span style="font-weight: bold;">80-89 mm Hg</span>. This means that the pressure in your arteries is higher than the normal range, but not yet at a level that is considered high blood pressure.</p>
@@ -339,7 +358,7 @@ chart.render();
 	
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Stage2" class="container pt">
+	<div id="Stage2" class="container pt Page">
 						<h4>Stage 2 Hypertension</h4>
 		<div class="row mt centered">	
       <p>Stage 2 hypertension is a more severe form of high blood pressure where a person's blood pressure consistently measures at a systolic pressure of <span style="font-weight: bold;">140 mm Hg or higher</span>, or a diastolic pressure of <span style="font-weight: bold;">90 mm Hg or higher</span>. At this stage, the risk of developing serious health problems such as heart disease, stroke, and kidney damage increases significantly.</p>
@@ -355,7 +374,7 @@ chart.render();
 		
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Hypotension" class="container pt">
+	<div id="Hypotension" class="container pt Page">
 <h4>Hypotension Low blood pressure</h4>
 		<div class="row mt centered">	
 	   <p>Hypotension, also known as low blood pressure, is a condition in which a person's blood pressure is abnormally low, typically less than <span style="font-weight: bold;">90/60 mmHg</span>. While hypotension can be asymptomatic or mild, it can also cause significant symptoms and complications.</p>
@@ -374,7 +393,7 @@ chart.render();
 	
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Hypertensive" class="container pt">
+	<div id="Hypertensive" class="container pt Page">
 						<h4>Hypertensive Emergency</h4>
 		<div class="row mt centered">	
  <p>Hypertensive emergency is a severe and potentially life-threatening condition in which a person's blood pressure rises to dangerously high levels, usually above <span style="font-weight: bold;">180/120 mmHg</span>. This condition requires immediate medical attention as it can cause damage to organs such as the brain, heart, and kidneys.</p>
@@ -390,7 +409,7 @@ chart.render();
 		
 	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Remedies" class="container pt">
+	<div id="Remedies" class="container pt Page">
 						<h2>Remedies for Managing High Blood Pressure</h2>
 		<div class="row mt centered">	
 	
@@ -417,7 +436,7 @@ chart.render();
 	  
 	  	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="About" class="container pt">
+	<div id="About" class="container pt Page">
 						<h2>About "Is My Blood Pressure OK?"</h2>
 		<div class="row mt centered">	
 	
@@ -434,10 +453,10 @@ chart.render();
 	  
 	  	<!-- +++++ Projects Section +++++ -->
 
-	<div id="Contact" class="container pt">
+	<div id="Contact" class="container pt Page">
 						<h2>Contact Us</h2>
 		<div class="row mt centered">	
-		<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+		<form action="mailto:lrpmedia@yahoo.com" method="post" enctype="text/plain">
 		<label for="name">Name:</label>
 		<input type="text" id="name" name="name" placeholder="Your name" required>
 		
