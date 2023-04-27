@@ -564,20 +564,6 @@ function showPage(pageId) {
 		
 		
 		
-// Add an event listener to all links with a class of "page-link"
-const links = document.querySelectorAll(".page-link");
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function(event) {
-    // Prevent the default link behavior
-    event.preventDefault();
-    
-    // Get the ID of the page to show from the link's href attribute
-    const pageId = this.getAttribute("href").substr(1);
-    
-    // Call the showPage function with the page ID
-    showPage(pageId);
-  });
-}
 		
 		
 		
