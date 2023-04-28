@@ -110,7 +110,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#check_bp_container" onclick="showPage('check_bp_container')">Home</a></li>
 						<li><a href="#About" onclick="showPage('About')">About</a></li>
-						<li><a href="#Blogs" onclick="showPage('Blogs')">Blog</a></li>
+						<li><a href="#Resources" onclick="showPage('Resources')">Resources</a></li>
 						<li><a href="#Remedies" onclick="showPage('Remedies')">Remedies</a></li>
 						<li><a href="#Contact" onclick="showPage('Contact')">Contact</a></li>
 					</ul>
@@ -128,21 +128,17 @@
 					
 									<h1>Is My Blood Pressure Ok?</h1>
 
-					<div id='check_bp_container_top ' >
-						<div class='check_bp_text_input_areas '>
-							<div class='check_bp_text_areas'>
-							Systole "top number":
-						</div>
-						<input id='check_bp_systole_input_areas' class='bp_inputs' type="text" name="Systole" placeholder="top number">
-						</div>
-						
-						<div class='check_bp_text_input_areas'>
-							<div class='check_bp_text_areas'>
-							Diastole "bottom number":
-						</div>
-						<input id='check_bp_diastole_input_areas' class='bp_inputs' type="text" name="Diastole" placeholder="bottom number">
-						</div>						
-					</div>
+				<div id="check-bp-container">
+  <div class="check-bp-input-container">
+    <label for="systole-input">Systolic Pressure:</label>
+    <input id="systole-input" class="bp-inputs" type="number" name="systole" placeholder="Enter systolic pressure" required>
+  </div>
+  
+  <div class="check-bp-input-container">
+    <label for="diastole-input">Diastolic Pressure:</label>
+    <input id="diastole-input" class="bp-inputs" type="number" name="diastole" placeholder="Enter diastolic pressure" required>
+  </div>						
+</div>
 					
 					
 
@@ -484,29 +480,171 @@ chart.render();
 		
 		<button type="submit">Send Message</button>
 			
-			<a href="#check_bp_container" onclick="showPage('check_bp_container')">Back</a>
-	</form>
+	</form><br>
+						<a href="#check_bp_container" onclick="showPage('check_bp_container')">Back</a>
+
 		</div><!-- /row -->
 	</div><!-- /container -->
 	
 
 	  
+	  	  	<!-- +++++ Projects Section +++++ -->
+	
+	<div id="Basics" class="container  Page">
+						<h2>Blood Pressure Basics</h2>
+		<div class="row mt centered">	
+	<nav>
+	<ul>
+		<li><a href="#WhatIsBP">What is Blood Pressure?</a></li>
+		<li><a href="#HowIsItMeasured">How is Blood Pressure Measured?</a></li>
+		<li><a href="#WhatDoReadingsMean">What do Blood Pressure Readings Mean?</a></li>
+		<li><a href="#FactorsAffectingBP">Factors that Affect Blood Pressure</a></li>
+	</ul>
+</nav>
+			
+			<main>
+	<section id="WhatIsBP">
+		<h2>What is Blood Pressure?</h2>
+		<p>Blood pressure is the force of blood pushing against the walls of arteries as it flows through the body. It is measured in millimeters of mercury (mmHg) and expressed as two numbers, systolic pressure (top number) and diastolic pressure (bottom number).</p>
+	</section>
+
+	<section id="HowIsItMeasured">
+		<h2>How is Blood Pressure Measured?</h2>
+		<p>Blood pressure is measured using a device called a sphygmomanometer. The measurement is taken with a cuff that is wrapped around the upper arm and inflated to temporarily stop the flow of blood. The pressure in the cuff is then slowly released while a healthcare provider listens for the sound of blood flowing through the artery with a stethoscope.</p>
+	</section>
+
+	<section id="WhatDoReadingsMean">
+		<h2>What do Blood Pressure Readings Mean?</h2>
+		<p>Blood pressure readings are expressed as two numbers, with the systolic pressure (top number) first and the diastolic pressure (bottom number) second. A normal blood pressure reading is generally considered to be 120/80 mmHg or lower. Higher readings may indicate prehypertension, hypertension, or hypertensive crisis.</p>
+	</section>
+
+	<section id="FactorsAffectingBP">
+		<h2>Factors that Affect Blood Pressure</h2>
+		<p>There are several factors that can affect blood pressure, including:</p>
+		<ul>
+			<li>Age</li>
+			<li>Gender</li>
+			<li>Race</li>
+			<li>Family history</li>
+			<li>Physical inactivity</li>
+			<li>Obesity</li>
+			<li>Tobacco use</li>
+			<li>Excessive alcohol consumption</li>
+			<li>Stress</li>
+			<li>Chronic conditions such as diabetes and kidney disease</li>
+		</ul>
+		<p>It is important to work with a healthcare provider to manage these factors and maintain healthy blood pressure levels.</p>
+	</section>
+</main>
+			
+			
+			<br>			<a href="#check_bp_container" onclick="showPage('check_bp_container')">Back</a>
+			
+		
+
+		</div><!-- /row -->
+	</div><!-- /container -->
+	  
+	  
+	  
+	  
+	  	  	<!-- +++++ Projects Section +++++ -->
+	
+	<div id="TnP" class="container  Page">
+						<h2>Treatment and Prevention</h2>
+		<div class="row mt centered">	
+	<main>
+		<section>
+			<h1>Treatment</h1>
+			<p>If you have been diagnosed with high blood pressure, your doctor may recommend lifestyle changes or medication to lower your blood pressure. Here are some common treatments for high blood pressure:</p>
+			<ul>
+				<li>Adopting a healthy diet</li>
+				<li>Increasing physical activity</li>
+				<li>Losing weight if you are overweight or obese</li>
+				<li>Reducing alcohol consumption</li>
+				<li>Quitting smoking</li>
+				<li>Taking medication prescribed by your doctor</li>
+			</ul>
+			<p>It is important to work with your healthcare provider to determine the best treatment plan for you.</p>
+		</section>
+		<section>
+			<h1>Prevention</h1>
+			<p>There are several steps you can take to prevent high blood pressure or to keep it under control:</p>
+			<ul>
+				<li>Maintain a healthy weight</li>
+				<li>Eat a healthy diet that is low in salt, saturated fats, and cholesterol</li>
+				<li>Engage in regular physical activity</li>
+				<li>Limit alcohol consumption</li>
+				<li>Avoid smoking and exposure to secondhand smoke</li>
+				<li>Manage stress through relaxation techniques, such as deep breathing, meditation, or yoga</li>
+				<li>Get regular check-ups with your healthcare provider</li>
+			</ul>
+			<p>By adopting a healthy lifestyle and making these changes, you can lower your risk of developing high blood pressure or other chronic conditions.</p>
+		</section>
+	</main>
+			
+			
+			
+			
+			<br>			<a href="#check_bp_container" onclick="showPage('check_bp_container')">Back</a>
+
+		</div><!-- /row -->
+	</div><!-- /container -->
 	  
 	  
 	  
 	  
 	  
 	  
+	  	  	<!-- +++++ Projects Section +++++ -->
+	
+	<div id="Resources" class="container  Page">
+						<h2>Resources</h2>
+		<div class="row mt centered">	
+	
+				<main>
+		<section>
+			<h2>Recommended Websites</h2>
+			<ul>
+				<li><a href="https://www.heart.org/en/health-topics/high-blood-pressure">American Heart Association - High Blood Pressure</a></li>
+				<li><a href="https://www.nhlbi.nih.gov/health-topics/high-blood-pressure">National Heart, Lung, and Blood Institute - High Blood Pressure</a></li>
+				<li><a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410">Mayo Clinic - High Blood Pressure (Hypertension)</a></li>
+				<li><a href="https://www.cdc.gov/bloodpressure/index.htm">Centers for Disease Control and Prevention - High Blood Pressure</a></li>
+			</ul>
+		</section>
+		<section>
+			<h2>Recommended Apps</h2>
+			<ul>
+				<li><a href="https://www.myheartmylife.org/mobile-app/">American Heart Association - My Heart, My Life App</a></li>
+				<li><a href="https://www.heart.org/en/healthy-living/healthy-lifestyle-tools-and-resources/blood-pressure-tools-and-resources">Blood Pressure Tools and Resources from the American Heart Association</a></li>
+				<li><a href="https://www.webmd.com/diet/features/apps-high-blood-pressure-diet">WebMD - Apps for High Blood Pressure: Diet, Tracking, and More</a></li>
+			</ul>
+		</section>
+		<section>
+			<h2>Support Groups</h2>
+			<p>Connecting with others who are also managing high blood pressure can be a great source of support and motivation. Here are some resources for finding support groups:</p>
+			<ul>
+				<li><a href="https://www.heart.org/en/get-involved/advocate/find-a-support-group">American Heart Association - Find a Support Group</a></li>
+				<li><a href="https://www.meetup.com/topics/high-blood-pressure-support/">Meetup - High Blood Pressure Support</a></li>
+				<li><a href="https://www.healthfinder.gov/FindServices/SearchContext.aspx?topic=1582">Healthfinder.gov - Support Groups for High Blood Pressure</a></li>
+			</ul>
+		</section>
+	</main>
+			
+			
+			
+			<br>			<a href="#check_bp_container" onclick="showPage('check_bp_container')">Back</a>
+
+		</div><!-- /row -->
+	</div><!-- /container -->
 	  
 	  
-	  
-	  
-	  
+	 
 	  
 	  
 	  	<!-- +++++ Projects Section +++++ -->
 	
-	<div id="Blogs" class="container  Page">
+	<div id="Resources" class="container  Page">
 						<p>Blogs</p>
 		<div class="row mt centered">	
 			<div class="col-lg-4" onClick=(href="#ww") >
@@ -537,6 +675,12 @@ chart.render();
 	
 	<footer id="footer">
 		<div class="container centered">
+					<div class="container centered flex">
+
+			 	<a href="#Basics" onclick="showPage('Basics')">Basics</a>
+			<a href="#TnP" onclick="showPage('TnP')">Treatment and Prevention</a>
+			<a href="#Resources" onclick="showPage('Resources')">Resources</a>
+			</div>
 			<p>&copy; 2023 My Website. All rights reserved.</p>
 					<center>These classification of blood pressure adopted by the American Heart Association for adults who are 18 years and older.</center>
 
