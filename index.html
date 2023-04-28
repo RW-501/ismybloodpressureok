@@ -224,13 +224,13 @@ if(systole_input > 180 || diastole_input > 120) {
 			ms1 = '<h1>Your Blood Pressure is <strong>'+BP_results + "</strong></h1><br>";
 			ms2 = 'With a Systole '+ s+' and a Diastole of '+ d ;
 			if(BP_results == "Low"){
-				ms3 = ' Your blood pressure is '+BP_results + '<br>'+ result_link + "<br>";
+				ms3 = ' Your blood pressure is '+BP_results + '<br><br><br>'+ result_link + "<br>";
 			} 
 			if(BP_results == "High"){
-				ms3 = ' Your blood pressure is '+BP_results + '<br>'+ result_link + "<br>";
+				ms3 = ' Your blood pressure is '+BP_results + '<br><br><br>'+ result_link + "<br>";
 			} 
 			if(BP_results == "OK"){
-				ms3 = ' Your blood pressure is '+BP_results +"!!!" + '<br>'+ result_link + "<br>";
+				ms3 = ' Your blood pressure is '+BP_results +"!!!" + '<br><br><br>'+ result_link + "<br>";
 			} 
 			
 			BP_message = ms1 + ms2 + ' <br><h4>'+ ms3 + '<h4> <hr><br>'+ "<a href='#check_bp_container' onclick=showPage('check_bp_container')>Reset</a>";
