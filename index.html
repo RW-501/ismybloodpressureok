@@ -153,7 +153,7 @@
 					
 				</div>
 				<br>
-		<div id='bp_results_container'   class="container Page">
+		<div id='bp_results_container'   class="container Page centered">
 
 				<div id='bp_results'></div>
 				
@@ -177,59 +177,45 @@
 
 			var BP_type, BP_message, readmore_link, BP_results;
 			
- 
-			var systole_input = Number(systole_input);
-			 var diastole_input = Number(diastole_input);
-			 var s = Number(systole_input);
+ 			 var s = Number(systole_input);
 			 var d = Number(diastole_input);
 			
-			
-			if(systole_input >= '90' && systole_input <= '120' ||
-			   diastole_input >= '60' && diastole_input <= '80' ){
-				BP_type = 'Desired "Blood Pressure"';
-				readmore_link = "<a href='#Desired' onclick=showPage('Desired'); >Read more about "+BP_type+"...</a>";
-			}
-			if(systole_input >= '120' && systole_input <= '139' ||
-			   diastole_input >= '80' && diastole_input <= '89' ){
-				BP_type = 'Prehypertension "High Normal"';
-				readmore_link = "<a href='#Prehypertension' onclick=showPage('Prehypertension'); >Read more about "+BP_type+"...</a>";
-			}
-			
-			// High BP
-			if(systole_input >= '140' && diastole_input >= '90' ){
-				BP_type = 'Isolated Systolic Hypertension';
-				readmore_link = "<a href='#Systolic' onclick=showPage('Systolic')>Read more about "+BP_type+"...</a>";
-			}
-			
-			if(systole_input >= '140' && systole_input <= '159' ||
-			   diastole_input >= '90' && diastole_input <= '99' ){
-				BP_type = 'Stage 1 Hypertension';
-				readmore_link = "<a href='#Stage1' onclick=showPage('Stage1')>Read more about "+BP_type+"...</a>";
-			}
-			if(systole_input >= '160' && systole_input <= '179' ||
-			   diastole_input >= '100' && diastole_input <= '119' ){
-				BP_type = 'Stage 2 Hypertension';
-				readmore_link = "<a href='#Stage2' onclick=showPage('Stage2')>Read more about "+BP_type+"...</a>";
-			}
-			
-			var result_link, result_type; 
+			var systole_input = Number(systole_input);
+var diastole_input = Number(diastole_input);
 
-			if(systole_input < '90' || diastole_input < '60' ){
-				BP_results = 'Low';
-				result_type= 'Low blood pressure';
-				result_link = "<a href='#Hypotension' onclick=showPage('Hypotension')>Check out more info here "+result_type+"...</a>";
-			}		
-			if(systole_input >= '90' && systole_input <= '120' ||
-			   diastole_input >= '60' && diastole_input <= '120' ){
-				BP_results = 'OK';
-				result_link = "<a href='#Remedies' onclick=showPage('Remedies')>Check out remdies and drop some advise to others </a>";
-			}				
-			if(systole_input > '180' || diastole_input > '120' ){
-				BP_results = 'High';
-				result_type= 'High blood pressure';
-				result_link = "<a href='#Hypertensive' onclick=showPage('Hypertensive')>Check out more info here about "+result_type+"...</a>";
-			}
-						
+if(systole_input >= 90 && systole_input <= 120 || diastole_input >= 60 && diastole_input <= 80) {
+  BP_type = 'Desired "Blood Pressure"';
+  readmore_link = "<a href='#Desired' onclick='showPage(\"Desired\")'>Read more about " + BP_type + "...</a>";
+} else if(systole_input >= 120 && systole_input <= 139 || diastole_input >= 80 && diastole_input <= 89) {
+  BP_type = 'Prehypertension "High Normal"';
+  readmore_link = "<a href='#Prehypertension' onclick='showPage(\"Prehypertension\")'>Read more about " + BP_type + "...</a>";
+} else if(systole_input >= 140 && diastole_input >= 90) {
+  BP_type = 'Isolated Systolic Hypertension';
+  readmore_link = "<a href='#Systolic' onclick='showPage(\"Systolic\")'>Read more about " + BP_type + "...</a>";
+} else if(systole_input >= 140 && systole_input <= 159 || diastole_input >= 90 && diastole_input <= 99) {
+  BP_type = 'Stage 1 Hypertension';
+  readmore_link = "<a href='#Stage1' onclick='showPage(\"Stage1\")'>Read more about " + BP_type + "...</a>";
+} else if(systole_input >= 160 && systole_input <= 179 || diastole_input >= 100 && diastole_input <= 119) {
+  BP_type = 'Stage 2 Hypertension';
+  readmore_link = "<a href='#Stage2' onclick='showPage(\"Stage2\")'>Read more about " + BP_type + "...</a>";
+}
+
+var result_link, result_type;
+
+if(systole_input < 90 || diastole_input < 60) {
+  BP_results = 'Low';
+  result_type = 'Low blood pressure';
+  result_link = "<a href='#Hypotension' onclick='showPage(\"Hypotension\")'>Check out more info here " + result_type + "...</a>  "+readmore_link;
+}
+if(systole_input >= 90 && systole_input <= 120 || diastole_input >= 60 && diastole_input <= 120) {
+  BP_results = 'OK';
+  result_link = "<a href='#Remedies' onclick='showPage(\"Remedies\")'>Check out remedies and drop some advice to others</a>  "+readmore_link;
+}
+if(systole_input > 180 || diastole_input > 120) {
+  BP_results = 'High';
+  result_type = 'High blood pressure';
+  result_link = "<a href='#Hypertensive' onclick='showPage(\"Hypertensive\")'>Check out more info here about " + result_type + "...</a>  "+readmore_link;
+}
 			
 			
 			
